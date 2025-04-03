@@ -6,7 +6,7 @@ export interface Task {
   priority: "low" | "medium" | "high" | "urgent";
   assignedTo: string;
   estimatedHours: number;
-  deadline: string; // ISO date string
+  deadline: number; // Days from now until the task is due. Value is integer.
   dependencies: string[]; // Array of task IDs this task depends on
   category: "tax_filing" | "audit" | "bookkeeping" | "payroll" | "reporting";
 }

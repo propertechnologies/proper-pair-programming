@@ -1,6 +1,6 @@
 import { Injectable, NotFoundException } from "@nestjs/common";
-import { Task, CreateTaskDto, UpdateTaskDto } from "../types";
 import { v4 as uuidv4 } from "uuid";
+import { CreateTaskDto, Task, UpdateTaskDto } from "../types";
 
 @Injectable()
 export class TasksService {
@@ -13,7 +13,7 @@ export class TasksService {
       priority: "high",
       assignedTo: "user-1",
       estimatedHours: 4,
-      deadline: "2025-04-15T00:00:00Z",
+      deadline: 5,
       dependencies: [],
       category: "tax_filing",
     },
@@ -25,7 +25,7 @@ export class TasksService {
       priority: "medium",
       assignedTo: "user-2",
       estimatedHours: 3,
-      deadline: "2025-04-10T00:00:00Z",
+      deadline: 4,
       dependencies: [],
       category: "reporting",
     },
@@ -37,7 +37,7 @@ export class TasksService {
       priority: "urgent",
       assignedTo: "user-3",
       estimatedHours: 2,
-      deadline: "2025-04-05T00:00:00Z",
+      deadline: 3,
       dependencies: [],
       category: "payroll",
     },
@@ -49,7 +49,7 @@ export class TasksService {
       priority: "high",
       assignedTo: "user-1",
       estimatedHours: 5,
-      deadline: "2025-04-18T00:00:00Z",
+      deadline: 5,
       dependencies: ["task-1"],
       category: "tax_filing",
     },
@@ -61,7 +61,7 @@ export class TasksService {
       priority: "medium",
       assignedTo: "user-2",
       estimatedHours: 6,
-      deadline: "2025-04-25T00:00:00Z",
+      deadline: 6,
       dependencies: ["task-2"],
       category: "audit",
     },
